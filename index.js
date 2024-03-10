@@ -55,8 +55,13 @@ app.post('/name', (req, res) => {
 })
 
 app.post('/create-new-user', (req, res) => {
-    const person = new Person({name: 'venkat', age: 20})
-    person.save()
+    // const person = new Person({name: 'venkat', age: 20})
+    // person.save()
+    const arrayOfPeople = [
+        {name: 'venkat', age: 30},
+        {name: 'nani', age: 10},
+    ]
+    Person.create(arrayOfPeople)
     res.send()
 })
 
